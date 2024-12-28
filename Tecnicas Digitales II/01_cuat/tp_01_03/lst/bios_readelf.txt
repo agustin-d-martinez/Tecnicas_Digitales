@@ -1,0 +1,211 @@
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           ARM
+  Version:                           0x1
+  Entry point address:               0x70010000
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          81592 (bytes into file)
+  Flags:                             0x5000400, Version5 EABI, hard-float ABI
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         2
+  Size of section headers:           40 (bytes)
+  Number of section headers:         17
+  Section header string table index: 16
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .text             PROGBITS        70010000 010000 0008c4 00  AX  0   0  4
+  [ 2] .data             PROGBITS        700108c4 0108c4 000048 00  WA  0   0  4
+  [ 3] .bss              NOBITS          7001090c 01090c 000008 00  WA  0   0  4
+  [ 4] .stack            NOBITS          70020000 020000 001380 00  WA  0   0  1
+  [ 5] .debug_info       PROGBITS        00000000 01090c 000fbf 00      0   0  1
+  [ 6] .debug_abbrev     PROGBITS        00000000 0118cb 0006a0 00      0   0  1
+  [ 7] .debug_aranges    PROGBITS        00000000 011f6b 000148 00      0   0  1
+  [ 8] .debug_ranges     PROGBITS        00000000 0120b3 0000a0 00      0   0  1
+  [ 9] .debug_line       PROGBITS        00000000 012153 0007c3 00      0   0  1
+  [10] .debug_str        PROGBITS        00000000 012916 0005cd 01  MS  0   0  1
+  [11] .comment          PROGBITS        00000000 012ee3 000033 01  MS  0   0  1
+  [12] .ARM.attributes   ARM_ATTRIBUTES  00000000 012f16 000035 00      0   0  1
+  [13] .debug_frame      PROGBITS        00000000 012f4c 0001c8 00      0   0  4
+  [14] .symtab           SYMTAB          00000000 013114 0007c0 10     15  66  4
+  [15] .strtab           STRTAB          00000000 0138d4 00053d 00      0   0  1
+  [16] .shstrtab         STRTAB          00000000 013e11 0000a7 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  D (mbind), y (purecode), p (processor specific)
+
+There are no section groups in this file.
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  LOAD           0x010000 0x70010000 0x70010000 0x0090c 0x00914 RWE 0x10000
+  LOAD           0x000000 0x70020000 0x70020000 0x00000 0x01380 RW  0x10000
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .text .data .bss 
+   01     .stack 
+
+There is no dynamic section in this file.
+
+There are no relocations in this file.
+
+There are no unwind sections in this file.
+
+Symbol table '.symtab' contains 124 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 70010000     0 SECTION LOCAL  DEFAULT    1 .text
+     2: 700108c4     0 SECTION LOCAL  DEFAULT    2 .data
+     3: 7001090c     0 SECTION LOCAL  DEFAULT    3 .bss
+     4: 70020000     0 SECTION LOCAL  DEFAULT    4 .stack
+     5: 00000000     0 SECTION LOCAL  DEFAULT    5 .debug_info
+     6: 00000000     0 SECTION LOCAL  DEFAULT    6 .debug_abbrev
+     7: 00000000     0 SECTION LOCAL  DEFAULT    7 .debug_aranges
+     8: 00000000     0 SECTION LOCAL  DEFAULT    8 .debug_ranges
+     9: 00000000     0 SECTION LOCAL  DEFAULT    9 .debug_line
+    10: 00000000     0 SECTION LOCAL  DEFAULT   10 .debug_str
+    11: 00000000     0 SECTION LOCAL  DEFAULT   11 .comment
+    12: 00000000     0 SECTION LOCAL  DEFAULT   12 .ARM.attributes
+    13: 00000000     0 SECTION LOCAL  DEFAULT   13 .debug_frame
+    14: 00000000     0 FILE    LOCAL  DEFAULT  ABS reset_vector.o
+    15: 70010000     0 NOTYPE  LOCAL  DEFAULT    1 $a
+    16: 00000000     0 FILE    LOCAL  DEFAULT  ABS startup.o
+    17: 00000010     0 NOTYPE  LOCAL  DEFAULT  ABS USR_MODE
+    18: 00000011     0 NOTYPE  LOCAL  DEFAULT  ABS FIQ_MODE
+    19: 00000012     0 NOTYPE  LOCAL  DEFAULT  ABS IRQ_MODE
+    20: 00000013     0 NOTYPE  LOCAL  DEFAULT  ABS SVC_MODE
+    21: 00000017     0 NOTYPE  LOCAL  DEFAULT  ABS ABT_MODE
+    22: 0000001b     0 NOTYPE  LOCAL  DEFAULT  ABS UND_MODE
+    23: 0000001f     0 NOTYPE  LOCAL  DEFAULT  ABS SYS_MODE
+    24: 00000080     0 NOTYPE  LOCAL  DEFAULT  ABS I_BIT
+    25: 00000040     0 NOTYPE  LOCAL  DEFAULT  ABS F_BIT
+    26: 70010004     0 NOTYPE  LOCAL  DEFAULT    1 _table_start
+    27: 70010024     0 NOTYPE  LOCAL  DEFAULT    1 add_reset_vector
+    28: 70010004     0 NOTYPE  LOCAL  DEFAULT    1 $a
+    29: 70010028     0 NOTYPE  LOCAL  DEFAULT    1 add_UND_vector
+    30: 7001002c     0 NOTYPE  LOCAL  DEFAULT    1 add_SVC_vector
+    31: 70010030     0 NOTYPE  LOCAL  DEFAULT    1 add_Prefetch_vector
+    32: 70010034     0 NOTYPE  LOCAL  DEFAULT    1 add_Abort_vector
+    33: 70010038     0 NOTYPE  LOCAL  DEFAULT    1 add_IRQ_vector
+    34: 7001003c     0 NOTYPE  LOCAL  DEFAULT    1 add_FIQ_vector
+    35: 70010024     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    36: 70010040     0 NOTYPE  LOCAL  DEFAULT    1 _TABLE_COPY
+    37: 70010040     0 NOTYPE  LOCAL  DEFAULT    1 $a
+    38: 7001004c     0 NOTYPE  LOCAL  DEFAULT    1 _TABLE_LOOP
+    39: 7001005c     0 NOTYPE  LOCAL  DEFAULT    1 _STACK_INIT
+    40: 70010098     0 NOTYPE  LOCAL  DEFAULT    1 idle
+    41: 700100a0     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    42: 00000000     0 FILE    LOCAL  DEFAULT  ABS scheduler.c
+    43: 700100c4     0 NOTYPE  LOCAL  DEFAULT    1 $a
+    44: 7001090c     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    45: 00000000     0 FILE    LOCAL  DEFAULT  ABS handlers.o
+    46: 70010210     0 NOTYPE  LOCAL  DEFAULT    1 $a
+    47: 00000000     0 FILE    LOCAL  DEFAULT  ABS kernel_handlers.c
+    48: 7001029c     0 NOTYPE  LOCAL  DEFAULT    1 $a
+    49: 00000000     0 FILE    LOCAL  DEFAULT  ABS task_1.c
+    50: 700103bc     0 NOTYPE  LOCAL  DEFAULT    1 $a
+    51: 00000000     0 FILE    LOCAL  DEFAULT  ABS task_idle.c
+    52: 700103fc     0 NOTYPE  LOCAL  DEFAULT    1 $a
+    53: 00000000     0 FILE    LOCAL  DEFAULT  ABS task_3.c
+    54: 7001040c     0 NOTYPE  LOCAL  DEFAULT    1 $a
+    55: 00000000     0 FILE    LOCAL  DEFAULT  ABS task_2.c
+    56: 70010450     0 NOTYPE  LOCAL  DEFAULT    1 $a
+    57: 00000000     0 FILE    LOCAL  DEFAULT  ABS board.c
+    58: 700108c4     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    59: 70010490     0 NOTYPE  LOCAL  DEFAULT    1 $a
+    60: 00000000     0 FILE    LOCAL  DEFAULT  ABS timer.c
+    61: 700107cc     0 NOTYPE  LOCAL  DEFAULT    1 $a
+    62: 00000000     0 FILE    LOCAL  DEFAULT  ABS gic.c
+    63: 70010848     0 NOTYPE  LOCAL  DEFAULT    1 $a
+    64: 00000000     0 FILE    LOCAL  DEFAULT  ABS global_variable.c
+    65: 70010904     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    66: 7001029c   276 FUNC    GLOBAL DEFAULT    1 __kernel_handler_IRQ
+    67: 70010908     4 OBJECT  GLOBAL DEFAULT    2 var_global2
+    68: 70020380     0 NOTYPE  GLOBAL DEFAULT    4 __sys_stack_top__
+    69: 00000200     0 NOTYPE  GLOBAL DEFAULT  ABS _SVC_TASK3_STACK_SIZE
+    70: 70010224     0 NOTYPE  GLOBAL DEFAULT    1 _Prefetch_handler
+    71: 70020080     0 NOTYPE  GLOBAL DEFAULT    4 __irq_stack_top__
+    72: 00000200     0 NOTYPE  GLOBAL DEFAULT  ABS _SVC_TASK_IDLE_S[...]
+    73: 00000200     0 NOTYPE  GLOBAL DEFAULT  ABS _IRQ_TASK_IDLE_S[...]
+    74: 00000200     0 NOTYPE  GLOBAL DEFAULT  ABS _IRQ_TASK3_STACK_SIZE
+    75: 7001021c     0 NOTYPE  GLOBAL DEFAULT    1 _SVC_handler
+    76: 00000200     0 NOTYPE  GLOBAL DEFAULT  ABS _SVC_TASK2_STACK_SIZE
+    77: 7001090c     0 NOTYPE  GLOBAL DEFAULT    3 __bss_start__
+    78: 700100c4   332 FUNC    GLOBAL DEFAULT    1 __scheduler
+    79: 70020580     0 NOTYPE  GLOBAL DEFAULT    4 __irq_task1_stac[...]
+    80: 00000200     0 NOTYPE  GLOBAL DEFAULT  ABS _SVC_TASK1_STACK_SIZE
+    81: 70020280     0 NOTYPE  GLOBAL DEFAULT    4 __und_stack_top__
+    82: 70020980     0 NOTYPE  GLOBAL DEFAULT    4 __irq_task3_stac[...]
+    83: 700103b0    12 FUNC    GLOBAL DEFAULT    1 __kernel_handler_FIQ
+    84: 70010000     0 NOTYPE  GLOBAL DEFAULT  ABS _PUBLIC_RAM_INIT
+    85: 70010904     4 OBJECT  GLOBAL DEFAULT    2 var_global1
+    86: 700107cc   124 FUNC    GLOBAL DEFAULT    1 __timer_init
+    87: 00000100     0 NOTYPE  GLOBAL DEFAULT  ABS _SYS_STACK_SIZE
+    88: 7001090c     8 OBJECT  GLOBAL DEFAULT    3 tcp_manager
+    89: 70021180     0 NOTYPE  GLOBAL DEFAULT    4 __svc_task3_stac[...]
+    90: 70010490    28 FUNC    GLOBAL DEFAULT    1 __board_init
+    91: 00000080     0 NOTYPE  GLOBAL DEFAULT  ABS _UND_STACK_SIZE
+    92: 00000080     0 NOTYPE  GLOBAL DEFAULT  ABS _IRQ_STACK_SIZE
+    93: 70020100     0 NOTYPE  GLOBAL DEFAULT    4 __fiq_stack_top__
+    94: 00000080     0 NOTYPE  GLOBAL DEFAULT  ABS _FIQ_STACK_SIZE
+    95: 700103bc    64 FUNC    GLOBAL DEFAULT    1 __task1
+    96: 70010230     0 NOTYPE  GLOBAL DEFAULT    1 _Abort_handler
+    97: 70010914     0 NOTYPE  GLOBAL DEFAULT    3 __bss_end__
+    98: 70010040     0 NOTYPE  GLOBAL DEFAULT    1 _start
+    99: 70010450    64 FUNC    GLOBAL DEFAULT    1 __task2
+   100: 70010848   124 FUNC    GLOBAL DEFAULT    1 __gic_init
+   101: 70020d80     0 NOTYPE  GLOBAL DEFAULT    4 __svc_task1_stac[...]
+   102: 700103fc    16 FUNC    GLOBAL DEFAULT    1 __task_idle
+   103: 70020180     0 NOTYPE  GLOBAL DEFAULT    4 __svc_stack_top__
+   104: 70020200     0 NOTYPE  GLOBAL DEFAULT    4 __abt_stack_top__
+   105: 7001040c    68 FUNC    GLOBAL DEFAULT    1 __task3
+   106: 00000200     0 NOTYPE  GLOBAL DEFAULT  ABS _IRQ_TASK1_STACK_SIZE
+   107: 700108c4    64 OBJECT  GLOBAL DEFAULT    2 tcb_Task
+   108: 700104ac   800 FUNC    GLOBAL DEFAULT    1 __stacks_init
+   109: 70010274     0 NOTYPE  GLOBAL DEFAULT    1 _FIQ_handler
+   110: 00000080     0 NOTYPE  GLOBAL DEFAULT  ABS _SVC_STACK_SIZE
+   111: 00000200     0 NOTYPE  GLOBAL DEFAULT  ABS _IRQ_TASK2_STACK_SIZE
+   112: 70020780     0 NOTYPE  GLOBAL DEFAULT    4 __irq_task2_stac[...]
+   113: 00000080     0 NOTYPE  GLOBAL DEFAULT  ABS _ABT_STACK_SIZE
+   114: 70010210     0 NOTYPE  GLOBAL DEFAULT    1 _UND_handler
+   115: 70020f80     0 NOTYPE  GLOBAL DEFAULT    4 __svc_task2_stac[...]
+   116: 7001023c     0 NOTYPE  GLOBAL DEFAULT    1 _IRQ_handler
+   117: 70080000     0 NOTYPE  GLOBAL DEFAULT  ABS _KERNEL_TCB
+   118: 70010000     0 NOTYPE  GLOBAL DEFAULT    1 _reset_vector
+   119: 70021380     0 NOTYPE  GLOBAL DEFAULT    4 __stack_end__
+   120: 70020000     0 NOTYPE  GLOBAL DEFAULT    4 __stack_start__
+   121: 70020b80     0 NOTYPE  GLOBAL DEFAULT    4 __irq_task_idle_[...]
+   122: 70021380     0 NOTYPE  GLOBAL DEFAULT    4 __svc_task_idle_[...]
+   123: 70020000     0 NOTYPE  GLOBAL DEFAULT  ABS _PUBLIC_STACK_INIT
+
+No version information found in this file.
+Attribute Section: aeabi
+File Attributes
+  Tag_CPU_name: "7-A"
+  Tag_CPU_arch: v7
+  Tag_CPU_arch_profile: Application
+  Tag_ARM_ISA_use: Yes
+  Tag_THUMB_ISA_use: Thumb-2
+  Tag_FP_arch: VFPv3
+  Tag_Advanced_SIMD_arch: NEONv1
+  Tag_ABI_PCS_wchar_t: 4
+  Tag_ABI_FP_denormal: Needed
+  Tag_ABI_FP_exceptions: Needed
+  Tag_ABI_FP_number_model: IEEE 754
+  Tag_ABI_align_needed: 8-byte
+  Tag_ABI_enum_size: small
+  Tag_ABI_VFP_args: VFP registers
+  Tag_ABI_optimization_goals: Aggressive Debug
+  Tag_CPU_unaligned_access: v6
+  Tag_Virtualization_use: TrustZone

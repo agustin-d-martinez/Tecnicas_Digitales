@@ -1,0 +1,20 @@
+# Ignore all 
+* 
+# Unignore all with extensions *.vhd  *.gitignore *.xpr *.wcfg
+#archivos codigo
+!*.vhd  
+!*.xlsx 
+#constrains
+!*.xdc  
+#proyectos
+!*.xpr  
+#componentes del ip catalog
+!*.xci  
+!*.wcfg
+#fotos
+!*.jpg 
+!*.pdf 
+!.gitignore
+!*/
+!*.PNG
+
