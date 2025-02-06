@@ -1,0 +1,33 @@
+{
+  "config": {
+    "items": [
+      {
+        "infra": {
+          "name": "picozed_7010_fmc2", 
+          "display": "PicoZed 7010 SOM + FMC Carrier V2", 
+          "revision": "1.2", 
+          "description": "PicoZed 7010 SOM + FMC Carrier V2", 
+          "company": "avnet.com", 
+          "company_display": "Avnet", 
+          "author": "Avnet", 
+          "contributors": [
+            {
+              "group": "Avnet", 
+              "url": "avnet.com"
+            }
+          ], 
+          "category": "Single Part", 
+          "website": "http://avnet.me/picozed", 
+          "search-keywords": [
+            "picozed_7010_fmc2", 
+            "avnet.com", 
+            "board", 
+            "Single Part"
+          ]
+        }
+      }
+    ]
+  }, 
+  "_major": 1, 
+  "_minor": 0
+}
